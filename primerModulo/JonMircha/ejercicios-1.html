@@ -10,7 +10,7 @@
         // 1) Programa una función que cuente el número de caracteres de una cadena de texto,
         //  pe. miFuncion("Hola Mundo") devolverá 10.
         
-        ejercicio1  = arg => {
+        function ejercicio1a  (arg){
             if (typeof(arg) ==="string") {
                 console.log(arg.length);
                 }
@@ -22,7 +22,31 @@
             }
 
         }
-        ejercicio1(2);
+        ejercicio1a("hola");
+
+        // console.clear()
+
+        const ejercicio1 = (arg = "") => 
+        (!arg) 
+        ? console.warn(`Cuidado! si no ingresas texto esto no va a funcionar `)
+        : console.log(arg.length)
+            
+        ejercicio1("1")
+
+        // Ejercicio 2:2) Programa una función que te devuelva el texto recortado según 
+        // el número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola".
+        function ejercicio2 (arg1, arg2) {
+            if (typeof(arg1) ==="string") {
+                console.log(arg1.slice(0, arg2));
+                }
+            else {
+                console.log();
+                let tipoElegido = typeof(arg1);
+                console.error(`Cuidado! Tu elección es un tipo: ${this.arg1} `)
+                console.warn("Necesitas ingresar una cadena de texto para que esto funcione.")
+            }}
+            ejercicio2("hola mundo" ,4);
+
     </script>
 </body>
 </html>
