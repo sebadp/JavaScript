@@ -69,13 +69,14 @@
             // 4) Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3)
             //  devolverá Hola Mundo Hola Mundo Hola Mundo.
 
-            console.clear()
-            const ejercicio4 = (txt = "" ) => 
+            const ejercicio4 = (txt = "", corte = undefined) => 
             (!txt) 
                 ? console.warn(`Cuidado! si no ingresas texto esto no va a funcionar `)
-                : console.log(txt.split(' '));
-
-            ejercicio3("hola mundohola mundohola mundohola mundohola mundo");
+                : (corte === undefined)
+                    ? console.warn(`Cuidado! si no ingresas tamaño del corte esto no va a funcionar `)
+                    : console.log(txt.repeat(corte))
+            
+            ejercicio4("Hola Mundo ", 3)
 
     </script>
 </body>
