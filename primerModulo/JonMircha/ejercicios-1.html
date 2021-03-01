@@ -11,11 +11,18 @@
         //  pe. miFuncion("Hola Mundo") devolverá 10.
         
         ejercicio1  = arg => {
-            console.log(typeof(arg));
-            console.log(arg.length);
+            if (typeof(arg) ==="string") {
+                console.log(arg.length);
+                }
+            else {
+                console.log();
+                let tipoElegido = typeof(arg);
+                console.error(`Cuidado! Tu elección es un tipo: ${this.arg} `)
+                console.warn("Necesitas ingresar una cadena de texto para que esto funcione.")
+            }
 
         }
-        ejercicio1("hola mundo");
+        ejercicio1(2);
     </script>
 </body>
 </html>
