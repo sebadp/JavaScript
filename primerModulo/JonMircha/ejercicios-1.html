@@ -59,22 +59,22 @@
             // pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'].
            
            console.clear()
-            const ejercicio3 = (txt = "" ) => 
+            const ejercicio3 = (txt = "", separador = "" ) => 
             (!txt) 
                 ? console.warn(`Cuidado! si no ingresas texto esto no va a funcionar `)
-                : console.log(txt.split(' '));
+                : console.log(txt.split(separador));
 
-            ejercicio3("hola mundohola mundohola mundohola mundohola mundo");
+            ejercicio3("hola mundohola mundohola mundohola mundohola mundo", " ");
 
             // 4) Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3)
             //  devolverá Hola Mundo Hola Mundo Hola Mundo.
 
-            const ejercicio4 = (txt = "", corte = undefined) => 
+            const ejercicio4 = (txt = "", repetir = undefined) => 
             (!txt) 
                 ? console.warn(`Cuidado! si no ingresas texto esto no va a funcionar `)
-                : (corte === undefined)
-                    ? console.warn(`Cuidado! si no ingresas tamaño del corte esto no va a funcionar `)
-                    : console.log(txt.repeat(corte))
+                : (repetir === undefined)
+                    ? console.warn(`Cuidado! si no ingresas tamaño de la repetición esto no va a funcionar `)
+                    : console.log(txt.repeat(repetir))
             
             ejercicio4("Hola Mundo ", 3)
 
