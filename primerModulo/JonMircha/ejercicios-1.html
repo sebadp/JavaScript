@@ -27,9 +27,9 @@
         // console.clear()
 
         const ejercicio1 = (arg = "") => 
-        (!arg) 
-        ? console.warn(`Cuidado! si no ingresas texto esto no va a funcionar `)
-        : console.log(arg.length)
+            (!arg) 
+                ? console.warn(`Cuidado! si no ingresas texto esto no va a funcionar `)
+                : console.log(arg.length)
             
         ejercicio1("1")
 
@@ -46,6 +46,15 @@
                 console.warn("Necesitas ingresar una cadena de texto para que esto funcione.")
             }}
             ejercicio2("hola mundo" ,4);
+
+            const ejercicio2b = (txt = "", corte = undefined) => 
+            (!txt) 
+                ? console.warn(`Cuidado! si no ingresas texto esto no va a funcionar `)
+                : (corte === undefined)
+                    ? console.warn(`Cuidado! si no ingresas tamaño del corte esto no va a funcionar `)
+                    : console.log(txt.slice(0, corte))
+            
+            ejercicio2b("asdasd", 1)
 
     </script>
 </body>
