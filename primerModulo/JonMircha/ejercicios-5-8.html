@@ -32,6 +32,8 @@
             ejercicio5("Hola Mundo ")
         
             console.clear();
+
+
         // 6) Programa una función para contar el número de veces que se repite una palabra
         //  en un texto largo, pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2.
         
@@ -109,7 +111,16 @@
             }}
             ejercicio8(54)
             ejercicio8("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz")
+            console.clear()
+            
+                        // RESOLUCIÓN DE JON EJERCICIO 5
 
+            const invertirCadena = (cadena = "") => 
+            (!cadena)
+                ? console.warn("No ingresaste una cadena!")
+                : console.log(cadena.split("").reverse().join(""))
+            invertirCadena("hola mundoS")
+            
     </script>
 </body>
 </html>
