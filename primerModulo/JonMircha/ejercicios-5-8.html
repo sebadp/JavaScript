@@ -31,29 +31,35 @@
             
             ejercicio5("Hola Mundo ")
         
+            console.clear();
         // 6) Programa una función para contar el número de veces que se repite una palabra
         //  en un texto largo, pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2.
         
-        const ejercicio6 = (txt = "") => { 
+        const ejercicio6 = (txt = "", repetida = "") => { 
             try {
-                if  (typeof(txt) !== "string") {
+                if  ((typeof(txt) !== "string") || (typeof(repetida) !== "string")) {
                 throw new Error("Lo introducido no es un TEXTO");
                 }
-            console.log(txt);
-            arrayDerecha = txt.split("");
-            console.log(arrayDerecha);
-            arrayReversa = arrayDerecha.reverse()
-            console.log(arrayReversa);
-            stringReversa =arrayReversa.join();
-            console.log(stringReversa.replace(/,/g, ""));
+            arrayTxt = txt.split(" ");
+            let counter = 0
+            for (let i = 0; i<arrayTxt.length; i++) {
+            var currentWord = arrayTxt[i];
+            if (currentWord === repetida) {
+            counter ++;
+            }
+            }
+            console.log(arrayTxt)
+            console.log(arrayTxt.length)
+            console.log(`Encontramos la palabra "${repetida}": ${counter} veces`);
+
             } catch (error) {
-            console.log(`Se produjo el siguiente error: ${error}`);
+            console.warn(`Se produjo el siguiente ${error}`);
             }}
 
             
             ejercicio6(54)
             
-            ejercicio6("Hola Mundo ")
+            ejercicio6("hola mundo adios mundo mundo", "mundo")
 
         // 7) Programa una función que valide si una palabra o frase dada, es un palíndromo 
         // (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.
