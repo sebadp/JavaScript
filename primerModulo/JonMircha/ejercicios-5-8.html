@@ -61,8 +61,31 @@
             
             ejercicio6("hola mundo adios mundo mundo", "mundo")
 
+            console.clear();
+
         // 7) Programa una función que valide si una palabra o frase dada, es un palíndromo 
         // (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.
+
+        const ejercicio7 = (txt = "") => { 
+            try {
+                if  (typeof(txt) !== "string") {
+                throw new Error("Lo introducido no es un TEXTO");
+                }
+            console.log(txt);
+            arrayDerecha = txt.split("");
+            console.log(arrayDerecha);
+            arrayReversa = arrayDerecha.reverse()
+            console.log(arrayReversa);
+            stringReversa =arrayReversa.join();
+            console.log(stringReversa.replace(/,/g, "")); 
+            } catch (error) {
+                console.log(`Se produjo el siguiente error: ${error}`);
+            }}
+
+            
+            ejercicio7(54)
+            
+            ejercicio7("Hola Mundo ")
         
         
         // 8) Programa una función que elimine cierto patrón de caracteres de un texto dado, 
