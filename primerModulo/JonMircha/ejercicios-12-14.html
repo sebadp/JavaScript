@@ -10,22 +10,24 @@
 // 12) Programa una función que determine si un número es primo 
 // (aquel que solo es divisible por sí mismo y 1) o no, pe. miFuncion(7) devolverá true.
 
-    const ejercicio12 = (numero) => {
-        if (numero === undefined) return console.warn("No ingresaste nada...");
-        if (typeof(numero) !== "number") return console.error("Esto no va a funcionar sin un NUMERO!")
-        if (numero === 0) return console.error("No se puede sacar un factorial de 0!")
-        for (i=2; i < numero; i++){
-            if (numero % i === 0) {
-                return console.log("Este número no es primo")
-            } else{
-                return console.log("Este número sí es primo!")
-            }
-        }
-        }
-        ejercicio12(3);
-        ejercicio12(5);
-        ejercicio12(7);
-        ejercicio12(9);
+//     const ejercicio12 = (numero) => {
+//         if (numero === undefined) return console.warn("No ingresaste nada...");
+//         if (typeof(numero) !== "number") return console.error("Esto no va a funcionar sin un NUMERO!")
+//         if (numero === 0) return console.error("No se puede sacar un factorial de 0!")
+//         primos = [];
+//         for (i=2; i < numero; i++){
+//             if ((numero % i) === 0) {
+//                 console.log("No Es un número primo");
+//                 break;
+//             } else {
+//                 return console.log("Es un número primo")
+//             }
+//             }
+            
+
+//         }
+//         ejercicio12(15);
+
 
 
 // console.clear();
@@ -54,7 +56,23 @@
 // 14) Programa una función para convertir grados Celsius a Fahrenheit y viceversa, pe. 
 // miFuncion(0,"C") devolverá 32°F.
 
-
+const ejercicio14 = (numero = 0 , escala = "") => {
+    if (numero === undefined) return console.warn("No ingresaste nada...")
+    if (typeof(numero) !== "number") return console.error("Esto no va a funcionar sin un NUMERO!")
+    if (numero === 0) return console.error("No se puede sacar un factorial de 0!")
+    if (typeof(escala) !== "string")return console.warn("Necesitas una ESCALA para que esto funcione")
+    if (escala === "C" ) {
+        resultado = (this.numero * 1.8) + 32
+        return console.log(`${this.número} Grados F. son ${resultado} Grados Celcius `)
+        } else if (escala === "F" ) {
+            resultado = (this.numero * 1.8) + 32
+            return console.log(`${this.número} Grados F. son ${this.número} Grados Celcius `)
+            } else {
+                return console.log("Esa no es una escala válida")
+            }
+    
+    }
+ejercicio14(68, "F")
 
 // console.clear()
     </script>
