@@ -51,7 +51,23 @@
         todos los números enteros positivos desde 1 hasta n), pe. miFuncion(5) devolverá 120 
         */ 
 
-        
+            const obtenerFactorial = (numero = undefined) => {
+                if (numero === undefined) return console.warn("No ingresaste nada...")
+                if (typeof(numero) !== "number") return console.error("Esto no va a funcionar sin un NUMERO!")
+                if (numero === 0) return console.error("No se puede sacar un factorial de 0!")
+                if (Math.sign(numero) === -1) return console.error("No se puede sacar un factorial de un numero negativo!")
+                
+                let resultado = 1;
+                for (let i=numero; i > 1; i--){
+                  resultado *= i; 
+                  console.log(i);
+                  console.log(resultado);
+                }
+                console.log(resultado)
+
+            }
+            obtenerFactorial(5)
+            // console.log(resultado)
 
     </script>
 
