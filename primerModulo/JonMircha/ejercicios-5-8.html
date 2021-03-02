@@ -77,7 +77,12 @@
             arrayReversa = arrayDerecha.reverse()
             console.log(arrayReversa);
             stringReversa =arrayReversa.join();
-            console.log(stringReversa.replace(/,/g, "")); 
+            reversaCompleta = stringReversa.replace(/,/g, "");
+            console.log(txt.toLowerCase());
+            console.log(reversaCompleta.toLowerCase());
+            if (txt.toLowerCase() === reversaCompleta.toLowerCase()) {
+                console.log("Es palíndromo!")
+            } else { console.log("La palabra no es un palíndromo")};
             } catch (error) {
                 console.log(`Se produjo el siguiente error: ${error}`);
             }}
@@ -85,7 +90,7 @@
             
             ejercicio7(54)
             
-            ejercicio7("Hola Mundo ")
+            ejercicio7("Salas")
         
         
         // 8) Programa una función que elimine cierto patrón de caracteres de un texto dado, 
