@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// 12) Programa una función que determine si un número es primo 
+// (aquel que solo es divisible por sí mismo y 1) o no, pe. miFuncion(7) devolverá true.
+
+    const ejercicio12 = (numero) => {
+        if (numero === undefined) return console.warn("No ingresaste nada...");
+        if (typeof(numero) !== "number") return console.error("Esto no va a funcionar sin un NUMERO!")
+        if (numero === 0) return console.error("No se puede sacar un factorial de 0!")
+        for (i=2; i < numero; i++){
+            if (numero % i === 0) {
+                return console.log("Este número no es primo")
+            } else{
+                return console.log("Este número sí es primo!")
+            }
+        }
+        }
+        ejercicio12(3);
+        ejercicio12(5);
+        ejercicio12(7);
+        ejercicio12(9);
+
+
+// console.clear();
+
+// 13) Programa una función que determine si un número es par o impar, pe. 
+// miFuncion(29) devolverá Impar.
+// const ejercicio13 = (numero) => {
+//     if (numero === undefined) return console.warn("No ingresaste nada...")
+//     if (typeof(numero) !== "number") return console.error("Esto no va a funcionar sin un NUMERO!")
+//     if (numero === 0) return console.error("No se puede sacar un factorial de 0!")
+//     parOImpar = numero % 2
+//     if (parOImpar === 1 ) {
+//         return console.log("El número seleccionado es impar")
+//         } else {
+//             return console.log("El número seleccionado es par")
+//         }
+    
+//     }
+//     ejercicio13(6);
+//     ejercicio13(3);
+//     ejercicio13(250);
+//     ejercicio13(125);
+        
+//     console.clear();
+
+// 14) Programa una función para convertir grados Celsius a Fahrenheit y viceversa, pe. 
+// miFuncion(0,"C") devolverá 32°F.
+
+
+
+// console.clear()
+    </script>
+</body>
+</html>
