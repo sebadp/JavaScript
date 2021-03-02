@@ -10,19 +10,51 @@
         // 5) Programa una función que invierta las palabras de una cadena de texto, pe
         // . miFuncion("Hola Mundo") devolverá "odnuM aloH".
         
-        const ejercicio4 = (txt = "", repetir = undefined) => 
-            (!txt) 
-                ? console.warn(`Cuidado! si no ingresas texto esto no va a funcionar `)
-                : (repetir === undefined)
-                    ? console.warn(`Cuidado! si no ingresas tamaño de la repetición esto no va a funcionar `)
-                    : console.log(txt.repeat(repetir))
+        const ejercicio5 = (txt = "") => { 
+            try {
+                if  (typeof(txt) !== "string") {
+                throw new Error("Lo introducido no es un TEXTO");
+                }
+            console.log(txt);
+            arrayDerecha = txt.split("");
+            console.log(arrayDerecha);
+            arrayReversa = arrayDerecha.reverse()
+            console.log(arrayReversa);
+            stringReversa =arrayReversa.join();
+            console.log(stringReversa.replace(/,/g, "")); 
+            } catch (error) {
+                console.log(`Se produjo el siguiente error: ${error}`);
+            }}
+
             
-            ejercicio4("Hola Mundo ", 3)
+            ejercicio5(54)
+            
+            ejercicio5("Hola Mundo ")
         
         // 6) Programa una función para contar el número de veces que se repite una palabra
         //  en un texto largo, pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2.
         
-        
+        const ejercicio6 = (txt = "") => { 
+            try {
+                if  (typeof(txt) !== "string") {
+                throw new Error("Lo introducido no es un TEXTO");
+                }
+            console.log(txt);
+            arrayDerecha = txt.split("");
+            console.log(arrayDerecha);
+            arrayReversa = arrayDerecha.reverse()
+            console.log(arrayReversa);
+            stringReversa =arrayReversa.join();
+            console.log(stringReversa.replace(/,/g, ""));
+            } catch (error) {
+            console.log(`Se produjo el siguiente error: ${error}`);
+            }}
+
+            
+            ejercicio6(54)
+            
+            ejercicio6("Hola Mundo ")
+
         // 7) Programa una función que valide si una palabra o frase dada, es un palíndromo 
         // (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.
         
