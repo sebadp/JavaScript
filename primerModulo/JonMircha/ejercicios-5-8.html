@@ -92,9 +92,31 @@
             
             ejercicio7("Salas")
         
-        
+            console.clear();
+
         // 8) Programa una función que elimine cierto patrón de caracteres de un texto dado, 
         // pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5.
+
+        const ejercicio8 = (txt = "", repetida = "") => { 
+            try {
+                if  ((typeof(txt) !== "string") || (typeof(repetida) !== "string")) {
+                throw new Error("Lo introducido no es un TEXTO");
+                }
+            arrayTxt = txt.split(" ");
+            let counter = 0
+            for (let i = 0; i<arrayTxt.length; i++) {
+            var currentWord = arrayTxt[i];
+            if (currentWord === repetida) {
+            counter ++;
+            }}
+            console.log(arrayTxt)
+            console.log(arrayTxt.length)
+            console.log(`Encontramos la palabra "${repetida}": ${counter} veces`);
+            } catch (error) {
+            console.warn(`Se produjo el siguiente ${error}`);
+            }}
+            ejercicio8(54)
+            ejercicio8("hola mundo adios mundo mundo", "mundo")
 
     </script>
 </body>
