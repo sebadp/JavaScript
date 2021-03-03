@@ -10,23 +10,22 @@
 // 12) Programa una función que determine si un número es primo 
 // (aquel que solo es divisible por sí mismo y 1) o no, pe. miFuncion(7) devolverá true.
 
-//     const ejercicio12 = (numero) => {
-//         if (numero === undefined) return console.warn("No ingresaste nada...");
-//         if (typeof(numero) !== "number") return console.error("Esto no va a funcionar sin un NUMERO!")
-//         if (numero === 0) return console.error("No se puede sacar un factorial de 0!")
-//         primos = [];
-//         for (i=2; i < numero; i++){
-//             if ((numero % i) === 0) {
-//                 console.log("No Es un número primo");
-//                 break;
-//             } else {
-//                 return console.log("Es un número primo")
-//             }
-//             }
-            
+    // const ejercicio12 = (numero) => {
+    //     if (numero === undefined) return console.warn("No ingresaste nada...");
+    //     if (typeof(numero) !== "number") return console.error("Esto no va a funcionar sin un NUMERO!")
+    //     if (numero === 0) return console.error("No se puede sacar un factorial de 0!")
+    //     let primo = true;
+    //     for (i=2; i < numero; i++){
+    //         if ((numero % i) === 0) {
+    //             primo = false;
+    //             return console.log("Este número no es primo!")    
+    //             break;
+    //         }
+    //     }
+    //     if (primo === true) return console.log("Este número es primo!");    
 
-//         }
-//         ejercicio12(15);
+    //     }
+    //     ejercicio12(5);
 
 
 
@@ -35,16 +34,19 @@
 // 13) Programa una función que determine si un número es par o impar, pe. 
 // miFuncion(29) devolverá Impar.
 // const ejercicio13 = (numero) => {
-//     if (numero === undefined) return console.warn("No ingresaste nada...")
-//     if (typeof(numero) !== "number") return console.error("Esto no va a funcionar sin un NUMERO!")
-//     if (numero === 0) return console.error("No se puede sacar un factorial de 0!")
-//     parOImpar = numero % 2
-//     if (parOImpar === 1 ) {
-//         return console.log("El número seleccionado es impar")
-//         } else {
-//             return console.log("El número seleccionado es par")
-//         }
-    
+//     if (numero === undefined) return console.warn("No ingresaste nada...");
+//     if (typeof(numero) !== "number") return console.error("Esto no va a funcionar sin un NUMERO!");
+//     if (numero === 0) return console.error("No se puedes usar el 0!");
+//     // parOImpar = numero % 2
+//     // if (parOImpar === 1 ) {
+//     //     return console.log("El número seleccionado es impar")
+//     //     } else {
+//     //         return console.log("El número seleccionado es par")
+//     //     }
+//     return ((parOImpar = numero % 2) === 1)
+//         ? console.log("El número seleccionado es impar")
+//         : console.log("El número seleccionado es par")
+        
 //     }
 //     ejercicio13(6);
 //     ejercicio13(3);
@@ -59,14 +61,16 @@
 const ejercicio14 = (numero = 0 , escala = "") => {
     if (numero === undefined) return console.warn("No ingresaste nada...")
     if (typeof(numero) !== "number") return console.error("Esto no va a funcionar sin un NUMERO!")
-    if (numero === 0) return console.error("No se puede sacar un factorial de 0!")
+    if (numero === 0) return console.error("No se puedes usar el 0!")
     if (typeof(escala) !== "string")return console.warn("Necesitas una ESCALA para que esto funcione")
     if (escala === "C" ) {
-        resultado = (this.numero * 1.8) + 32
-        return console.log(`${this.número} Grados F. son ${resultado} Grados Celcius `)
+        resultado = (numero * 9/5) + 32
+        let num = numero
+        return console.log(`${num} Grados F. son ${resultado} Grados Celcius `)
         } else if (escala === "F" ) {
-            resultado = (this.numero * 1.8) + 32
-            return console.log(`${this.número} Grados F. son ${this.número} Grados Celcius `)
+            let num = numero
+            resultado = (numero * 1.8) + 32
+            return console.log(`${num} Grados F. son ${resultado} Grados Celcius `)
             } else {
                 return console.log("Esa no es una escala válida")
             }
@@ -74,7 +78,7 @@ const ejercicio14 = (numero = 0 , escala = "") => {
     }
 ejercicio14(68, "F")
 
-// console.clear()
+// // console.clear()
     </script>
 </body>
 </html>
