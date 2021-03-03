@@ -66,10 +66,10 @@ const ejercicio14 = (numero = 0 , escala = "") => {
     if (escala === "C" ) {
         resultado = (numero * 9/5) + 32
         let num = numero
-        return console.log(`${num} Grados F. son ${resultado} Grados Celcius `)
+        return console.log(`${num} Grados Celcius son ${resultado} Grados F. `)
         } else if (escala === "F" ) {
             let num = numero
-            resultado = (numero * 1.8) + 32
+            resultado = (numero -32 ) * 5/9
             return console.log(`${num} Grados F. son ${resultado} Grados Celcius `)
             } else {
                 return console.log("Esa no es una escala válida")
