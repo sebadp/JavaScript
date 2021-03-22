@@ -10,13 +10,54 @@
 
 // 15) Programa una función para convertir números de base binaria a decimal y viceversa, 
 // pe. miFuncion(100,2) devolverá 4 base 10.
+// const ejercicio15 = (numero = 0 , base = 0) => {
+//     if (numero === undefined) return console.warn("No ingresaste nada a convertir");
+//     if (typeof(numero) !== "number") return console.error("Esto no va a funcionar sin un NUMERO!");
+//     if (base === undefined) return console.warn("No ingresaste nada como base");
+//     if (typeof(base) !== "number") return console.error("Esto no va a funcionar sin un NUMERO!");
+//     if (base === 2) {
+//         return console.log(parseInt(numero, base))
+//         } else if (base === 10){
+//             return console.log(numero.toString(10))
+//         } else{
+//             return console.log("Este tipo de base a convertir no es válido.")
+//         }
+//     }
+// ejercicio15(4,10);
+
 
 // 16) Programa una función que devuelva el monto final después de aplicar un descuento a 
 // una cantidad dada, pe. miFuncion(1000, 20) devolverá 800.
+// const ejercicio16 = (numero = 0 , descuento = 0) => {
+//     if (numero === undefined) return console.warn("No ingresaste nada...");
+//     if (typeof(numero) !== "number") return console.error("Esto no va a funcionar sin un NUMERO!");
+//     if (descuento === undefined) return console.warn("No ingresaste nada...");
+//     if (typeof(descuento) !== "number") return console.error("Esto no va a funcionar sin un NUMERO!");
+
+    
+//     let resultado = numero - ((numero / 100) * descuento)
+//     console.log(typeof(numero));
+//     return resultado;
+// }
+// ejercicio16(500000, 20);
 
 // 17) Programa una función que dada una fecha válida determine cuantos años han pasado 
 // hasta el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020).
+    let now = new Date().getTime()
 
+    const ejercicio17 = (fecha) => {
+        if (fecha === undefined) return console.log("NO me pasaste una fecha");
+        if (!fecha instanceof Date) return console.log("NO me pasaste una fecha");
+        newDate = new Date(fecha).getTime();
+        let resultado = now - newDate
+        console.log(now)
+        console.log(newDate)
+        anios = Math.floor(resultado/ (1000*60*60*24*365 ))
+        return console.log(anios);
+    }
+
+    ejercicio17('1986,12,12');
+    
     </script>
 </body>
 </html>
