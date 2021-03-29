@@ -10,6 +10,30 @@
         
     // 18) Programa una función que dada una cadena de texto cuente el número de vocales y consonantes, 
     // pe. miFuncion("Hola Mundo") devuelva Vocales: 4, Consonantes: 5.
+
+    const ejercicio5 = (txt = "") => { 
+            try {
+                if  (typeof(txt) !== "string") {
+                throw new Error("Lo introducido no es un TEXTO");
+                }
+            console.log(txt);
+            arrayDerecha = txt.split("");
+            console.log(arrayDerecha);
+            arrayReversa = arrayDerecha.reverse()
+            console.log(arrayReversa);
+            stringReversa =arrayReversa.join();
+            console.log(stringReversa.replace(/,/g, "")); 
+            } catch (error) {
+                console.log(`Se produjo el siguiente error: ${error}`);
+            }}
+
+            
+            ejercicio5(54)
+            
+            ejercicio5("Hola Mundo ")
+        
+            console.clear();
+
         
 // 19) Programa una función que valide que un texto sea un nombre válido, pe.
 //  miFuncion("Jonathan MirCha") devolverá verdadero.
